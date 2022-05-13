@@ -1,0 +1,22 @@
+[Unit]
+Description=Cloudflare DynDNS
+After=docker.service
+Requires=dyndns.service
+
+[Service]
+ExecStart=\
+        docker run \
+        cloudflare_dyndns:latest \
+        <record> \
+        <zone> \
+        --token=<token> \
+        --log-level=DEBUG
+StandardOutput=inherit
+StandardError=inherit
+
+[Timer]
+Unit=dyndns.service
+OnCalendar=*-*-* 12:34:56
+
+[Install]
+WantedBy=timers.target
