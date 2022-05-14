@@ -14,6 +14,7 @@ You will also need to update the `dyndns.service` file to set the record, domain
 
 Finally add the service file and enable it
 ```sh
-$ systemctl enable dyndns.service
+$ sudo ln -s $(pwd)/dyndns.service /etc/systemd/system/dyndns.service
+$ sudo ln -s $(pwd)/dyndns.timer /etc/systemd/system/dyndns.timer
 $ systemctl enable dyndns.timer
 ```
