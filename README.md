@@ -10,9 +10,10 @@ Build the docker image
 $ docker build -t cloudflare_dyndns ./
 ```
 
-Add the service file and enable it
+You will also need to update the `dyndns.service` file to set the record, domain, and token
+
+Finally add the service file and enable it
 ```sh
-$ sudo ln -s $(pwd)/dyndns.service /etc/systemd/system/dyndns.service
-$ sudo ln -s $(pwd)/dyndns.timer /etc/systemd/system/dyndns.timer
+$ systemctl enable dyndns.service
 $ systemctl enable dyndns.timer
 ```
