@@ -14,9 +14,5 @@ ExecStart=\
 StandardOutput=inherit
 StandardError=inherit
 
-[Timer]
-Unit=dyndns.service
-OnCalendar=*-*-* 12:34:56
-
 [Install]
-WantedBy=timers.target
+WantedBy=default.target

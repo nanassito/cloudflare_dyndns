@@ -1,0 +1,13 @@
+[Unit]
+Description=Update IP address once per hour
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+Persistent=false
+OnBootSec=120
+OnUnitActiveSec=3600
+Unit=dyndns.service
+
+[Install]
+WantedBy=timers.target
