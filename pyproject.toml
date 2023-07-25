@@ -5,7 +5,7 @@ description = "Tool to programatically update DNS records in Cloudflare"
 authors = ["Dorian Jaminais-Grellier <dorian@jaminais.fr>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 requests = "^2.31.0"
 argparse-logging = "^2020.11.26"
 urllib-ext = "^2021.10.26"
